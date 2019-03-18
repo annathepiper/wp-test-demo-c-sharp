@@ -1,24 +1,31 @@
-﻿using System;
-using RestSharp;
+﻿using NUnit.Framework;
 
 namespace WPTestDemo
 {
-    public class WPTestClient
+    public class BaseTest
     {
-        // Service endpoint templates
-        private string wpSite = "%s://%s";
+        // Use these for the WP Test Client
+        private static string protocol;
+        private static string host;
 
-        /**
-         * WPTestClient
-         * Constructor for the class.
-         * <param name="incomingHost">String containing the host address for the test site</param>
-         * <param name="incomingProtocol">String containing the protocol to use for URIs</param>
-         */
-        WPTestClient(string incomingHost, string incomingProtocol)
+        // Use these for test default values
+        public static string getPostId;
+        public static string getPostTitle;
+
+        // For generating the instance of the WP Test Client
+        public WPTestClient wpTC;
+
+        [SetUp]
+        public void SetUp()
         {
-            wpSite = String.Format(wpSite, incomingHost, incomingProtocol);
+            // Let's set the properties
+            protocol = Properties.Settings.Default.protocol;
+            host = Properties.Settings.Default.host;
+            getPostId = Properties.Settings.Default.getPostId;
+            getPostTitle = Properties.Settings.Default.getPostTitle;
+
+            // We also need a WPTestClient object for all the tests to use
+            wpTC = new WPTestClient(protocol, host);
         }
-
-
     }
 }
