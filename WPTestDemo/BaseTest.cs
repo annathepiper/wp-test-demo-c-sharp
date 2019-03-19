@@ -32,6 +32,16 @@ namespace WPTestDemo
         public static string getCategoryName;
 
         /// <summary>
+        /// Default comment ID to use for tests
+        /// </summary>
+        public static string getCommentId;
+
+        /// <summary>
+        /// Default comment content to use for tests
+        /// </summary>
+        public static string getCommentContent;
+
+        /// <summary>
         /// For generating the instance of the WP Test Client
         /// </summary>
         public WPTestClient wpTC;
@@ -49,6 +59,8 @@ namespace WPTestDemo
             getPostTitle = Properties.Settings.Default.getPostTitle;
             getCategoryId = Properties.Settings.Default.getCategoryId;
             getCategoryName = Properties.Settings.Default.getCategoryName;
+            getCommentId = Properties.Settings.Default.getCommentId;
+            getCommentContent = Properties.Settings.Default.getCommentContent;
 
             // We also need a WPTestClient object for all the tests to use
             wpTC = new WPTestClient(protocol, host);

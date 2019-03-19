@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WPTestDemo</name>
+    </assembly>
+    <members>
+        <member name="T:WPTestDemo.BaseTest">
+            <summary>
+            Master class for the TestNG suite. Does necessary setup work for all classes.
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getPostId">
+            <summary>
+            Default post ID to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getPostTitle">
+            <summary>
+            Default post title to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getCategoryId">
+            <summary>
+            Default category ID to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getCategoryName">
+            <summary>
+            Default category name to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getCommentId">
+            <summary>
+            Default comment ID to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getCommentContent">
+            <summary>
+            Default comment content to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.wpTC">
+            <summary>
+            For generating the instance of the WP Test Client
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.BaseTest.SetUp">
+            <summary>
+            Setup method for all test classes
+            </summary>
+        </member>
+        <member name="T:WPTestDemo.TestCategories">
+            <summary>
+            Test cases related to categories on the Wordpress test site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestCategories.TestGetCategoriesReturnsCategories">
+            <summary>
+            Verify that the GetCategories endpoint actually returns data. There should be a JArray of length > 0.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestCategories.TestGetCategoryById">
+            <summary>
+            Verify that you can get a category by a specific ID off the GetCategories endpoint.
+            </summary>
+        </member>
+        <member name="T:WPTestDemo.TestComments">
+            <summary>
+            Test cases related to comments on the Wordpress test site
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestComments.TestGetCommentsReturnsComments">
+            <summary>
+            Verify that the GetComments endpoint actually returns data. There should be a JArray of length > 0.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestComments.TestGetCommentById">
+            <summary>
+            Verify that you can get a comment by a specific ID off the GetComments endpoint.
+            </summary>
+        </member>
+        <member name="T:WPTestDemo.TestPosts">
+            <summary>
+            Test cases related to posts on the Wordpress test site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPosts.TestGetPostsReturnsPosts">
+            <summary>
+            Verify that the GetPosts endpoint actually returns data. There should be a JArray of length > 0.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPosts.TestGetPostById">
+            <summary>
+            Verify that you can get a post by a specific ID off the GetPosts endpoint.
+            </summary>
+        </member>
+        <member name="T:WPTestDemo.WPTestClient">
+            <summary>
+            Helper client the tests use to interact with the WordPress API endpoints.
+            Uses RestSharp to do the actual GET, POST, etc. calls.
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.WPTestClient.Client">
+            <summary>
+            Client to do calls to the Wordpress API endpoints
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for the class.
+            </summary>
+            <param name="incomingHost">
+            String containing the host address for the test site
+            </param>
+            <param name="incomingProtocol">
+            String containing the protocol to use for URIs
+            </param>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetPosts">
+            <summary>
+            Gets a JArray of posts on the test WordPress site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetPostById(System.String)">
+            <summary>
+            Get a specific post on the test WordPress site by post ID.
+            </summary>
+            <param name="postId">String containing the post ID to work with</param>
+            <returns>JObject from the Get call</returns>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetCategories">
+            <summary>
+            Gets a JArray of categories on the test WordPress site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetCategoryById(System.String)">
+            <summary>
+            Get a specific category on the test WordPress site by category ID.
+            </summary>
+            <param name="categoryId">String containing the category ID to work with</param>
+            <returns>JObject from the Get call</returns>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetComments">
+            <summary>
+            Get a JArray of comments on the test WordPress site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetCommentById(System.String)">
+            <summary>
+            Get a specific comment on the test WordPress site by comment ID.
+            </summary>
+            <param name="commentId">String containing the comment ID to work with</param>
+            <returns>JObject containing the comment data</returns>
+        </member>
+    </members>
+</doc>

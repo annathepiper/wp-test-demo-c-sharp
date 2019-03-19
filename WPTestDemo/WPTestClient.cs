@@ -48,7 +48,7 @@ namespace WPTestDemo
         /// Get a specific post on the test WordPress site by post ID.
         /// </summary>
         /// <param name="postId">String containing the post ID to work with</param>
-        /// <returns>JSONObject from the Get call</returns>
+        /// <returns>JObject from the Get call</returns>
         public JObject GetPostById(string postId)
         {
             var request = new RestRequest("/posts/{postId}", DataFormat.Json).
@@ -73,11 +73,36 @@ namespace WPTestDemo
         /// Get a specific category on the test WordPress site by category ID.
         /// </summary>
         /// <param name="categoryId">String containing the category ID to work with</param>
-        /// <returns>JSONObject from the Get call</returns>
+        /// <returns>JObject from the Get call</returns>
         public JObject GetCategoryById(string categoryId)
         {
             var request = new RestRequest("/categories/{categoryId}", DataFormat.Json).
                 AddParameter("categoryId", categoryId, ParameterType.UrlSegment);
+            var response = Client.Get(request);
+            JObject responseJson = JObject.Parse(response.Content);
+            return responseJson;
+        }
+
+        /// <summary>
+        /// Get a JArray of comments on the test WordPress site.
+        /// </summary>
+        public JArray GetComments()
+        {
+            var request = new RestRequest("/comments", DataFormat.Json);
+            var response = Client.Get(request);
+            JArray responseArray = JArray.Parse(response.Content);
+            return responseArray;
+        }
+
+        /// <summary>
+        /// Get a specific comment on the test WordPress site by comment ID.
+        /// </summary>
+        /// <param name="commentId">String containing the comment ID to work with</param>
+        /// <returns>JObject containing the comment data</returns>
+        public JObject GetCommentById(string commentId)
+        {
+            var request = new RestRequest("/comments/{commentId}", DataFormat.Json).
+                AddParameter("commentId", commentId, ParameterType.UrlSegment);
             var response = Client.Get(request);
             JObject responseJson = JObject.Parse(response.Content);
             return responseJson;
