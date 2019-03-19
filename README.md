@@ -13,4 +13,17 @@ I also add aliases for wordpress.local and phpmyadmin.local to my hosts file, so
 
 The test data I'm using is a copy of one of my [live Wordpress sites](http://angelahighland.info).
 
-The main tool I'm using to do this work is Visual Studio 2017. I've checked in all the files the project generated into this repo, and am using RestSharp to hit the service endpoints.
+The main tool I'm using to do this work is Visual Studio 2017. I've checked in all the files the project generated into this repo, and am using RestSharp to hit the service endpoints. For parsing JSON, I'm using the Linq functionality in Newtonsoft. 
+
+## Skills and tech I'm demonstrating here
+* Doing a C# test project as a Solution in Visual Studio
+* Use of project settings to set test-specific strings like ID numbers, titles, and names
+* Using RestSharp to hit service endpoints
+* Using Newtonsoft.Json.Linq functionality to process JSON payloads
+* Using NUnit functionality to run the test suite in Visual Studio and to annotate test methods
+* Testing against a site running as a Docker container
+
+## Reference links
+* [RestSharp](http://restsharp.org/), the library I'm using to do the REST API calls
+* [LINQ to JSon](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm), the functionality I'm using to parse the JSON payloads
+* [Visual Studio](https://visualstudio.microsoft.com/
