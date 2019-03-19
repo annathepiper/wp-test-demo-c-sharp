@@ -58,5 +58,41 @@ namespace WPTestDemo.Properties {
                 return ((string)(this["getPostTitle"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public string getCategoryId {
+            get {
+                return ((string)(this["getCategoryId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Uncategorized")]
+        public string getCategoryName {
+            get {
+                return ((string)(this["getCategoryName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public string getCommentId {
+            get {
+                return ((string)(this["getCommentId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("This is a comment for testing purposes, used by my test automation suite.")]
+        public string getCommentContent {
+            get {
+                return ((string)(this["getCommentContent"]));
+            }
+        }
     }
 }

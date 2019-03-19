@@ -18,3 +18,4 @@ C:\cygwin64\home\AngelaK\workspace\wp-test-demo-c-sharp\WPTestDemo\obj\Debug\WPT
 C:\cygwin64\home\AngelaK\workspace\wp-test-demo-c-sharp\WPTestDemo\obj\Debug\WPTestDemo.csproj.CopyComplete
 C:\cygwin64\home\AngelaK\workspace\wp-test-demo-c-sharp\WPTestDemo\obj\Debug\WPTestDemo.dll
 C:\cygwin64\home\AngelaK\workspace\wp-test-demo-c-sharp\WPTestDemo\obj\Debug\WPTestDemo.pdb
+C:\cygwin64\home\AngelaK\workspace\wp-test-demo-c-sharp\WPTestDemo\bin\Debug\WPTestDemo.xml
