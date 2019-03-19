@@ -94,5 +94,23 @@ namespace WPTestDemo.Properties {
                 return ((string)(this["getCommentContent"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("7")]
+        public string getTagId {
+            get {
+                return ((string)(this["getTagId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("administrivia")]
+        public string getTagName {
+            get {
+                return ((string)(this["getTagName"]));
+            }
+        }
     }
 }
