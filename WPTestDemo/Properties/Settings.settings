@@ -20,5 +20,11 @@
     <Setting Name="getCategoryName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Uncategorized</Value>
     </Setting>
+    <Setting Name="getCommentId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="getCommentContent" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">This is a comment for testing purposes, used by my test automation suite.</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
