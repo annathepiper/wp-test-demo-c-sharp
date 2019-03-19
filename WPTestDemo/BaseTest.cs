@@ -22,6 +22,16 @@ namespace WPTestDemo
         public static string getPostTitle;
 
         /// <summary>
+        /// Default tag ID to use for tests
+        /// </summary>
+        public static string getTagId;
+
+        /// <summary>
+        /// Default tag name to use for tests
+        /// </summary>
+        public static string getTagName;
+
+        /// <summary>
         /// Default category ID to use for tests
         /// </summary>
         public static string getCategoryId;
@@ -59,6 +69,8 @@ namespace WPTestDemo
             getPostTitle = Properties.Settings.Default.getPostTitle;
             getCategoryId = Properties.Settings.Default.getCategoryId;
             getCategoryName = Properties.Settings.Default.getCategoryName;
+            getTagId = Properties.Settings.Default.getTagId;
+            getTagName = Properties.Settings.Default.getTagName;
             getCommentId = Properties.Settings.Default.getCommentId;
             getCommentContent = Properties.Settings.Default.getCommentContent;
 

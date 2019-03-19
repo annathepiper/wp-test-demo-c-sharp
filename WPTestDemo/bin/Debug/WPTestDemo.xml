@@ -19,6 +19,16 @@
             Default post title to use for tests
             </summary>
         </member>
+        <member name="F:WPTestDemo.BaseTest.getTagId">
+            <summary>
+            Default tag ID to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getTagName">
+            <summary>
+            Default tag name to use for tests
+            </summary>
+        </member>
         <member name="F:WPTestDemo.BaseTest.getCategoryId">
             <summary>
             Default category ID to use for tests
@@ -47,6 +57,16 @@
         <member name="M:WPTestDemo.BaseTest.SetUp">
             <summary>
             Setup method for all test classes
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestTags.TestGetTagsReturnsTags">
+            <summary>
+            Verify that the GetTags endpoint actually returns data. There should be a JArray of length > 0.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestTags.TestGetTagById">
+            <summary>
+            Verify that you can get a tag by a specific ID off the GetTags endpoint.
             </summary>
         </member>
         <member name="T:WPTestDemo.TestCategories">
@@ -138,6 +158,18 @@
             Get a specific category on the test WordPress site by category ID.
             </summary>
             <param name="categoryId">String containing the category ID to work with</param>
+            <returns>JObject from the Get call</returns>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetTags">
+            <summary>
+            Get a JArray of tags on the test WordPress site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetTagById(System.String)">
+            <summary>
+            Get a specific tag on the test WordPress site by tag ID.
+            </summary>
+            <param name="tagId">String containing the tag ID to work with</param>
             <returns>JObject from the Get call</returns>
         </member>
         <member name="M:WPTestDemo.WPTestClient.GetComments">

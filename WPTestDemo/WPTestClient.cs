@@ -84,6 +84,31 @@ namespace WPTestDemo
         }
 
         /// <summary>
+        /// Get a JArray of tags on the test WordPress site.
+        /// </summary>
+        public JArray GetTags()
+        {
+            var request = new RestRequest("/tags", DataFormat.Json);
+            var response = Client.Get(request);
+            JArray responseArray = JArray.Parse(response.Content);
+            return responseArray;
+        }
+
+        /// <summary>
+        /// Get a specific tag on the test WordPress site by tag ID.
+        /// </summary>
+        /// <param name="tagId">String containing the tag ID to work with</param>
+        /// <returns>JObject from the Get call</returns>
+        public JObject GetTagById(string tagId)
+        {
+            var request = new RestRequest("/tags/{tagId}", DataFormat.Json).
+                AddParameter("tagId", tagId, ParameterType.UrlSegment);
+            var response = Client.Get(request);
+            JObject responseJson = JObject.Parse(response.Content);
+            return responseJson;
+        }
+
+        /// <summary>
         /// Get a JArray of comments on the test WordPress site.
         /// </summary>
         public JArray GetComments()
