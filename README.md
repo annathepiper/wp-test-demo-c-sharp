@@ -27,3 +27,4 @@ The main tool I'm using to do this work is Visual Studio 2017. I've checked in a
 * [RestSharp](http://restsharp.org/), the library I'm using to do the REST API calls
 * [LINQ to JSon](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm), the functionality I'm using to parse the JSON payloads
 * [Visual Studio](https://visualstudio.microsoft.com/)
+* [Selenium C# and NUnit Pain Free Start Guide](https://www.swtestacademy.com/selenium-webdriver-csharp-nunit/), a tutorial I used to see how to set up NUnit
