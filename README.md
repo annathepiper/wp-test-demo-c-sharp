@@ -2,7 +2,7 @@
 
 Project to experiment with C#, as part of my 2019 job search for SDET positions.
 
-This suite of test cases runs against an example Wordpress site. It uses Wordpress REST API endpoints to retrieve data about the test site, and analyzes JSON payloads returned by these endpoints.
+This suite of test cases runs against an example Wordpress site. It uses Wordpress REST API endpoints to retrieve data about the test site, and analyzes JSON payloads returned by these endpoints. This work is a direct port of the project over in my [wp-test-demo-java](https://github.com/annathepiper/wp-test-demo-java) repo.
 
 Since I have no prior experience with C# (as of March 2019), this project is less "demo" and more "practice". My goal with this project is to get some hands-on experience with C# in case a future position needs me to work with the language.
 
@@ -26,4 +26,4 @@ The main tool I'm using to do this work is Visual Studio 2017. I've checked in a
 ## Reference links
 * [RestSharp](http://restsharp.org/), the library I'm using to do the REST API calls
 * [LINQ to JSon](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm), the functionality I'm using to parse the JSON payloads
-* [Visual Studio](https://visualstudio.microsoft.com/
+* [Visual Studio](https://visualstudio.microsoft.com/)
