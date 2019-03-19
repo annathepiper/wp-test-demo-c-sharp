@@ -112,5 +112,23 @@ namespace WPTestDemo.Properties {
                 return ((string)(this["getTagName"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1087")]
+        public string getPageId {
+            get {
+                return ((string)(this["getPageId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Faerie Blood")]
+        public string getPageTitle {
+            get {
+                return ((string)(this["getPageTitle"]));
+            }
+        }
     }
 }
