@@ -49,6 +49,16 @@
             Default comment content to use for tests
             </summary>
         </member>
+        <member name="F:WPTestDemo.BaseTest.getPageId">
+            <summary>
+            Default page ID to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getPageTitle">
+            <summary>
+            Default page title to use for tests
+            </summary>
+        </member>
         <member name="F:WPTestDemo.BaseTest.wpTC">
             <summary>
             For generating the instance of the WP Test Client
@@ -57,6 +67,16 @@
         <member name="M:WPTestDemo.BaseTest.SetUp">
             <summary>
             Setup method for all test classes
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPages.TestGetPagesReturnsPages">
+            <summary>
+            Verify that the GetPages endpoint actually returns data. There should be a JArray of length > 0.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPages.TestGetPageById">
+            <summary>
+            Verify that you can get a page by a specific ID off the GetPages endpoint.
             </summary>
         </member>
         <member name="M:WPTestDemo.TestTags.TestGetTagsReturnsTags">
@@ -171,6 +191,18 @@
             </summary>
             <param name="tagId">String containing the tag ID to work with</param>
             <returns>JObject from the Get call</returns>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetPages">
+            <summary>
+            Get a JArray of pages on the test WordPress site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetPageById(System.String)">
+            <summary>
+            Get a specific page on the test WordPress site by page ID.
+            </summary>
+            <param name="pageId">String containing the ID of the page to work with</param>
+            <returns>JObject containing the page data</returns>
         </member>
         <member name="M:WPTestDemo.WPTestClient.GetComments">
             <summary>

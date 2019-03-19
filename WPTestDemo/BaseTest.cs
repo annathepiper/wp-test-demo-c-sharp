@@ -52,6 +52,16 @@ namespace WPTestDemo
         public static string getCommentContent;
 
         /// <summary>
+        /// Default page ID to use for tests
+        /// </summary>
+        public static string getPageId;
+
+        /// <summary>
+        /// Default page title to use for tests
+        /// </summary>
+        public static string getPageTitle;
+
+        /// <summary>
         /// For generating the instance of the WP Test Client
         /// </summary>
         public WPTestClient wpTC;
@@ -73,6 +83,8 @@ namespace WPTestDemo
             getTagName = Properties.Settings.Default.getTagName;
             getCommentId = Properties.Settings.Default.getCommentId;
             getCommentContent = Properties.Settings.Default.getCommentContent;
+            getPageId = Properties.Settings.Default.getPageId;
+            getPageTitle = Properties.Settings.Default.getPageTitle;
 
             // We also need a WPTestClient object for all the tests to use
             wpTC = new WPTestClient(protocol, host);

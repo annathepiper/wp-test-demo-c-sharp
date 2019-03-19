@@ -40,8 +40,7 @@ namespace WPTestDemo
         {
             var request = new RestRequest("/posts", DataFormat.Json);
             var response = Client.Get(request);
-            JArray responseArray = JArray.Parse(response.Content);
-            return responseArray;
+            return JArray.Parse(response.Content);
         }
 
         /// <summary>
@@ -54,8 +53,7 @@ namespace WPTestDemo
             var request = new RestRequest("/posts/{postId}", DataFormat.Json).
                 AddParameter("postId", postId, ParameterType.UrlSegment);
             var response = Client.Get(request);
-            JObject responseJson = JObject.Parse(response.Content);
-            return responseJson;
+            return JObject.Parse(response.Content);
         }
 
         /// <summary>
@@ -65,8 +63,7 @@ namespace WPTestDemo
         {
             var request = new RestRequest("/categories", DataFormat.Json);
             var response = Client.Get(request);
-            JArray responseArray = JArray.Parse(response.Content);
-            return responseArray;
+            return JArray.Parse(response.Content);
         }
 
         /// <summary>
@@ -79,8 +76,7 @@ namespace WPTestDemo
             var request = new RestRequest("/categories/{categoryId}", DataFormat.Json).
                 AddParameter("categoryId", categoryId, ParameterType.UrlSegment);
             var response = Client.Get(request);
-            JObject responseJson = JObject.Parse(response.Content);
-            return responseJson;
+            return JObject.Parse(response.Content);
         }
 
         /// <summary>
@@ -90,8 +86,7 @@ namespace WPTestDemo
         {
             var request = new RestRequest("/tags", DataFormat.Json);
             var response = Client.Get(request);
-            JArray responseArray = JArray.Parse(response.Content);
-            return responseArray;
+            return JArray.Parse(response.Content);
         }
 
         /// <summary>
@@ -104,8 +99,30 @@ namespace WPTestDemo
             var request = new RestRequest("/tags/{tagId}", DataFormat.Json).
                 AddParameter("tagId", tagId, ParameterType.UrlSegment);
             var response = Client.Get(request);
-            JObject responseJson = JObject.Parse(response.Content);
-            return responseJson;
+            return JObject.Parse(response.Content);
+        }
+
+        /// <summary>
+        /// Get a JArray of pages on the test WordPress site.
+        /// </summary>
+        public JArray GetPages()
+        {
+            var request = new RestRequest("/pages", DataFormat.Json);
+            var response = Client.Get(request);
+            return JArray.Parse(response.Content);
+        }
+
+        /// <summary>
+        /// Get a specific page on the test WordPress site by page ID.
+        /// </summary>
+        /// <param name="pageId">String containing the ID of the page to work with</param>
+        /// <returns>JObject containing the page data</returns>
+        public JObject GetPageById(string pageId)
+        {
+            var request = new RestRequest("/pages/{pageId}", DataFormat.Json).
+                AddParameter("pageId", pageId, ParameterType.UrlSegment);
+            var response = Client.Get(request);
+            return JObject.Parse(response.Content);
         }
 
         /// <summary>
@@ -115,8 +132,7 @@ namespace WPTestDemo
         {
             var request = new RestRequest("/comments", DataFormat.Json);
             var response = Client.Get(request);
-            JArray responseArray = JArray.Parse(response.Content);
-            return responseArray;
+            return JArray.Parse(response.Content);
         }
 
         /// <summary>
@@ -129,8 +145,7 @@ namespace WPTestDemo
             var request = new RestRequest("/comments/{commentId}", DataFormat.Json).
                 AddParameter("commentId", commentId, ParameterType.UrlSegment);
             var response = Client.Get(request);
-            JObject responseJson = JObject.Parse(response.Content);
-            return responseJson;
+            return JObject.Parse(response.Content);
         }
     }
 }
