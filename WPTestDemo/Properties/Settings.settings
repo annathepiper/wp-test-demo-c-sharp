@@ -50,5 +50,11 @@
     <Setting Name="getMediaTitle" Type="System.String" Scope="Application">
       <Value Profile="(Default)">cropped-faerie-blood-epub-cover.jpg</Value>
     </Setting>
+    <Setting Name="getUserId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="getUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">annathepiper</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

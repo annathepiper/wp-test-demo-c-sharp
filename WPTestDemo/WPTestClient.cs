@@ -195,5 +195,28 @@ namespace WPTestDemo
             var response = Client.Get(request);
             return JObject.Parse(response.Content);
         }
+
+        /// <summary>
+        /// Get a JArray of users on the test WordPress site.
+        /// </summary>
+        public JArray GetUsers()
+        {
+            var request = new RestRequest("/users", DataFormat.Json);
+            var response = Client.Get(request);
+            return JArray.Parse(response.Content);
+        }
+
+        /// <summary>
+        /// Get a specific user on the test WordPress site by their ID.
+        /// </summary>
+        /// <param name="userId">String containing the ID of the user to work with</param>
+        /// <returns>JObject containing the user data</returns>
+        public JObject GetUserById(string userId)
+        {
+            var request = new RestRequest("/users/{userId}", DataFormat.Json).
+                AddParameter("userId", userId, ParameterType.UrlSegment);
+            var response = Client.Get(request);
+            return JObject.Parse(response.Content);
+        }
     }
 }

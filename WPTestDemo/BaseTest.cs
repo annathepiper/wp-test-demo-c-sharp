@@ -82,6 +82,16 @@ namespace WPTestDemo
         public static string getMediaTitle;
 
         /// <summary>
+        /// Default user ID to use for tests
+        /// </summary>
+        public static string getUserId;
+
+        /// <summary>
+        /// Default user name to use for tests
+        /// </summary>
+        public static string getUserName;
+
+        /// <summary>
         /// For generating the instance of the WP Test Client
         /// </summary>
         public WPTestClient wpTC;
@@ -109,6 +119,8 @@ namespace WPTestDemo
             getTaxonomyName = Properties.Settings.Default.getTaxonomyName;
             getMediaIdWindows = Properties.Settings.Default.getMediaIdWindows;
             getMediaTitle = Properties.Settings.Default.getMediaTitle;
+            getUserId = Properties.Settings.Default.getUserId;
+            getUserName = Properties.Settings.Default.getUserName;
 
             // We also need a WPTestClient object for all the tests to use
             wpTC = new WPTestClient(protocol, host);

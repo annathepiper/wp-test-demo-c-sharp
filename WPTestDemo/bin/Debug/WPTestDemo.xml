@@ -79,6 +79,16 @@
             Default media title to use for tests
             </summary>
         </member>
+        <member name="F:WPTestDemo.BaseTest.getUserId">
+            <summary>
+            Default user ID to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getUserName">
+            <summary>
+            Default user name to use for tests
+            </summary>
+        </member>
         <member name="F:WPTestDemo.BaseTest.wpTC">
             <summary>
             For generating the instance of the WP Test Client
@@ -173,6 +183,16 @@
         <member name="M:WPTestDemo.TestTaxonomies.TestGetTaxonomyByTag">
             <summary>
             Verify that you can get a taxonomy by a specific tag off the GetTaxonomies endpoint.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestUsers.TestGetUsersReturnsUsers">
+            <summary>
+            Verify that the GetUsesrs endpoint actually returns data. There should be a JArray of length > 0.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestUsers.TestGetUserById">
+            <summary>
+            Verify that you can get a user by a specific ID off the GetUsers endpoint.
             </summary>
         </member>
         <member name="T:WPTestDemo.WPTestClient">
@@ -281,6 +301,18 @@
             </summary>
             <param name="mediaId">String containing the ID of the media item to work with</param>
             <returns>JObject containing the media data</returns>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetUsers">
+            <summary>
+            Get a JArray of users on the test WordPress site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetUserById(System.String)">
+            <summary>
+            Get a specific user on the test WordPress site by their ID.
+            </summary>
+            <param name="userId">String containing the ID of the user to work with</param>
+            <returns>JObject containing the user data</returns>
         </member>
     </members>
 </doc>
