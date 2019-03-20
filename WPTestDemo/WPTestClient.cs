@@ -147,5 +147,30 @@ namespace WPTestDemo
             var response = Client.Get(request);
             return JObject.Parse(response.Content);
         }
+
+        /// <summary>
+        /// Get a JObject of taxonomies on the test WordPress site.
+        /// </summary>
+        /// <returns></returns>
+        public JObject GetTaxonomies()
+        {
+            var request = new RestRequest("/taxonomies", DataFormat.Json);
+            var response = Client.Get(request);
+            return JObject.Parse(response.Content);
+        }
+
+        /// <summary>
+        /// Get a specific taxonomy on the test WordPress site by its tag
+        /// </summary>
+        /// <param name="taxonomyTag">String containing the tag for the taxonomy to work with</param>
+        /// <returns>JObject containing the taxonomy data</returns>
+        public JObject GetTaxonomyByTag(string taxonomyTag)
+        {
+            var request = new RestRequest("/taxonomies/{taxonomyTag}", DataFormat.Json).
+                AddParameter("taxonomyTag", taxonomyTag, ParameterType.UrlSegment);
+            var response = Client.Get(request);
+            return JObject.Parse(response.Content);
+
+        }
     }
 }

@@ -59,6 +59,16 @@
             Default page title to use for tests
             </summary>
         </member>
+        <member name="F:WPTestDemo.BaseTest.getTaxonomyTag">
+            <summary>
+            Default taxonomy tag to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getTaxonomyName">
+            <summary>
+            Default taxonomy name to use for tests
+            </summary>
+        </member>
         <member name="F:WPTestDemo.BaseTest.wpTC">
             <summary>
             For generating the instance of the WP Test Client
@@ -132,6 +142,17 @@
         <member name="M:WPTestDemo.TestPosts.TestGetPostById">
             <summary>
             Verify that you can get a post by a specific ID off the GetPosts endpoint.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestTaxonomies.TestGetTaxonomiesReturnsTaxonomies">
+            <summary>
+            Verify that the GetTaxonomies endpoint actually returns data. There
+            should be a JObject of length == 2.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestTaxonomies.TestGetTaxonomyByTag">
+            <summary>
+            Verify that you can get a taxonomy by a specific tag off the GetTaxonomies endpoint.
             </summary>
         </member>
         <member name="T:WPTestDemo.WPTestClient">
@@ -215,6 +236,19 @@
             </summary>
             <param name="commentId">String containing the comment ID to work with</param>
             <returns>JObject containing the comment data</returns>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetTaxonomies">
+            <summary>
+            Get a JObject of taxonomies on the test WordPress site.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetTaxonomyByTag(System.String)">
+            <summary>
+            Get a specific taxonomy on the test WordPress site by its tag
+            </summary>
+            <param name="taxonomyTag">String containing the tag for the taxonomy to work with</param>
+            <returns>JObject containing the taxonomy data</returns>
         </member>
     </members>
 </doc>

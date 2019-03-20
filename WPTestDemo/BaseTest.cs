@@ -62,6 +62,16 @@ namespace WPTestDemo
         public static string getPageTitle;
 
         /// <summary>
+        /// Default taxonomy tag to use for tests
+        /// </summary>
+        public static string getTaxonomyTag;
+
+        /// <summary>
+        /// Default taxonomy name to use for tests
+        /// </summary>
+        public static string getTaxonomyName;
+
+        /// <summary>
         /// For generating the instance of the WP Test Client
         /// </summary>
         public WPTestClient wpTC;
@@ -85,6 +95,8 @@ namespace WPTestDemo
             getCommentContent = Properties.Settings.Default.getCommentContent;
             getPageId = Properties.Settings.Default.getPageId;
             getPageTitle = Properties.Settings.Default.getPageTitle;
+            getTaxonomyTag = Properties.Settings.Default.getTaxonomyTag;
+            getTaxonomyName = Properties.Settings.Default.getTaxonomyName;
 
             // We also need a WPTestClient object for all the tests to use
             wpTC = new WPTestClient(protocol, host);

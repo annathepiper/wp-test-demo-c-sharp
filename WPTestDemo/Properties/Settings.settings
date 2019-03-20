@@ -38,5 +38,11 @@
     <Setting Name="getPageTitle" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Faerie Blood</Value>
     </Setting>
+    <Setting Name="getTaxonomyTag" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">category</Value>
+    </Setting>
+    <Setting Name="getTaxonomyName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Categories</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
