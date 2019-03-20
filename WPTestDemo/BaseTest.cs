@@ -102,6 +102,16 @@ namespace WPTestDemo
         public static string getPostTypeName;
 
         /// <summary>
+        /// Default post status tag to use for tests
+        /// </summary>
+        public static string getPostStatusTag;
+
+        /// <summary>
+        /// Default post status name to use for tests
+        /// </summary>
+        public static string getPostStatusName;
+
+        /// <summary>
         /// For generating the instance of the WP Test Client
         /// </summary>
         public WPTestClient wpTC;
@@ -133,6 +143,8 @@ namespace WPTestDemo
             getUserName = Properties.Settings.Default.getUserName;
             getPostTypeTag = Properties.Settings.Default.getPostTypeTag;
             getPostTypeName = Properties.Settings.Default.getPostTypeName;
+            getPostStatusTag = Properties.Settings.Default.getPostStatusTag;
+            getPostStatusName = Properties.Settings.Default.getPostStatusName;
 
             // We also need a WPTestClient object for all the tests to use
             wpTC = new WPTestClient(protocol, host);

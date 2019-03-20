@@ -62,5 +62,11 @@
     <Setting Name="getPostTypeName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Posts</Value>
     </Setting>
+    <Setting Name="getPostStatusTag" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">publish</Value>
+    </Setting>
+    <Setting Name="getPostStatusName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Published</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

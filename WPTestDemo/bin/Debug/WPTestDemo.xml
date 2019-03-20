@@ -99,6 +99,16 @@
             Default post type name to use for tests
             </summary>
         </member>
+        <member name="F:WPTestDemo.BaseTest.getPostStatusTag">
+            <summary>
+            Default post status tag to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getPostStatusName">
+            <summary>
+            Default post status name to use for tests
+            </summary>
+        </member>
         <member name="F:WPTestDemo.BaseTest.wpTC">
             <summary>
             For generating the instance of the WP Test Client
@@ -137,6 +147,22 @@
         <member name="M:WPTestDemo.TestPages.TestGetPageById">
             <summary>
             Verify that you can get a page by a specific ID off the GetPages endpoint.
+            </summary>
+        </member>
+        <member name="T:WPTestDemo.TestPostStatuses">
+            <summary>
+            Test cases related to post types on the Wordpress test site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostStatuses.TestGetPostStatusesReturnsPostStatuses">
+            <summary>
+            Verify that the GetPostStatuses endpoint actually returns data. There
+            should be a JObject of length == 1.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostStatuses.TestGetPostStatusByTag">
+            <summary>
+            Verify that you can get a post status by a specific tag off the GetPostStatuses endpoint.
             </summary>
         </member>
         <member name="T:WPTestDemo.TestPostTypes">
@@ -377,6 +403,18 @@
             </summary>
             <param name="postTypeTag">String containing the tag for the post type to work with</param>
             <returns>JObject containing the post type data</returns>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetPostStatuses">
+            <summary>
+            Get a JObject of post statuses on the test WordPress site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetPostStatusByTag(System.String)">
+            <summary>
+            Get a specific post status on the test WordPress site by its tag.
+            </summary>
+            <param name="postStatusTag">String containing the tag for the post status to work with</param>
+            <returns>JObject containing the post status data</returns>
         </member>
     </members>
 </doc>

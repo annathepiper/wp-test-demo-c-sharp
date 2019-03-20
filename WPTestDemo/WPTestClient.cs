@@ -242,5 +242,28 @@ namespace WPTestDemo
             var response = Client.Get(request);
             return JObject.Parse(response.Content);
         }
+
+        /// <summary>
+        /// Get a JObject of post statuses on the test WordPress site.
+        /// </summary>
+        public JObject GetPostStatuses()
+        {
+            var request = new RestRequest("/statuses", DataFormat.Json);
+            var response = Client.Get(request);
+            return JObject.Parse(response.Content);
+        }
+
+        /// <summary>
+        /// Get a specific post status on the test WordPress site by its tag.
+        /// </summary>
+        /// <param name="postStatusTag">String containing the tag for the post status to work with</param>
+        /// <returns>JObject containing the post status data</returns>
+        public JObject GetPostStatusByTag(string postStatusTag)
+        {
+            var request = new RestRequest("/statuses/{postStatusTag}", DataFormat.Json).
+                AddParameter("postStatusTag", postStatusTag, ParameterType.UrlSegment);
+            var response = Client.Get(request);
+            return JObject.Parse(response.Content);
+        }
     }
 }
