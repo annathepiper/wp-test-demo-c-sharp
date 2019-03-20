@@ -130,5 +130,23 @@ namespace WPTestDemo.Properties {
                 return ((string)(this["getPageTitle"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("category")]
+        public string getTaxonomyTag {
+            get {
+                return ((string)(this["getTaxonomyTag"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Categories")]
+        public string getTaxonomyName {
+            get {
+                return ((string)(this["getTaxonomyName"]));
+            }
+        }
     }
 }
