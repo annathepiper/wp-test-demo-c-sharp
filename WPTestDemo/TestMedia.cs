@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace WPTestDemo
 {
+    /// <summary>
+    /// Test cases related to media on the Wordpress test site.
+    /// </summary>
     class TestMedia: BaseTest
     {
         ///<summary>

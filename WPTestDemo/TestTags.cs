@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace WPTestDemo
 {
+    /// <summary>
+    /// Test cases related to tags on the Wordpress test site.
+    /// </summary>
     class TestTags: BaseTest
     {
         ///<summary>

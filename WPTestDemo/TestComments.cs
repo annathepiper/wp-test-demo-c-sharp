@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 namespace WPTestDemo
 {
     /// <summary>
-    /// Test cases related to comments on the Wordpress test site
+    /// Test cases related to comments on the Wordpress test site.
     /// </summary>
     class TestComments: BaseTest
     {
