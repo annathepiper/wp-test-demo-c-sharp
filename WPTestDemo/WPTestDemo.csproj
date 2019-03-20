@@ -73,6 +73,7 @@
     <Compile Include="TestComments.cs" />
     <Compile Include="TestPosts.cs" />
     <Compile Include="TestTaxonomies.cs" />
+    <Compile Include="TestUsers.cs" />
     <Compile Include="WPTestClient.cs" />
   </ItemGroup>
   <ItemGroup>

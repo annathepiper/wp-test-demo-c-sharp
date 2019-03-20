@@ -166,5 +166,23 @@ namespace WPTestDemo.Properties {
                 return ((string)(this["getMediaTitle"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public string getUserId {
+            get {
+                return ((string)(this["getUserId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("annathepiper")]
+        public string getUserName {
+            get {
+                return ((string)(this["getUserName"]));
+            }
+        }
     }
 }
