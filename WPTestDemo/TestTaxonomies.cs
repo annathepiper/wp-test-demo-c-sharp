@@ -16,7 +16,7 @@ namespace WPTestDemo
         public void TestGetTaxonomiesReturnsTaxonomies()
         {
             JObject responseObject = wpTC.GetTaxonomies();
-            Assert.True(responseObject.Count == 2, "GetTaxonomies endpoint not returning expected JSONObject length.");
+            Assert.AreEqual(responseObject.Count, 2, "GetTaxonomies endpoint not returning expected JSONObject length.");
             Assert.NotNull(responseObject, "GetTaxonomies endpoint returned a null response.");
         }
 
