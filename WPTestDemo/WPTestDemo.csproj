@@ -62,6 +62,7 @@
     <Compile Include="BaseTest.cs" />
     <Compile Include="TestMedia.cs" />
     <Compile Include="TestPages.cs" />
+    <Compile Include="TestPostStatuses.cs" />
     <Compile Include="TestPostTypes.cs" />
     <Compile Include="TestTags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

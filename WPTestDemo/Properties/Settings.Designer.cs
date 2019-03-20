@@ -202,5 +202,23 @@ namespace WPTestDemo.Properties {
                 return ((string)(this["getPostTypeName"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("publish")]
+        public string getPostStatusTag {
+            get {
+                return ((string)(this["getPostStatusTag"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Published")]
+        public string getPostStatusName {
+            get {
+                return ((string)(this["getPostStatusName"]));
+            }
+        }
     }
 }
