@@ -184,5 +184,23 @@ namespace WPTestDemo.Properties {
                 return ((string)(this["getUserName"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("post")]
+        public string getPostTypeTag {
+            get {
+                return ((string)(this["getPostTypeTag"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Posts")]
+        public string getPostTypeName {
+            get {
+                return ((string)(this["getPostTypeName"]));
+            }
+        }
     }
 }
