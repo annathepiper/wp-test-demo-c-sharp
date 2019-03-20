@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseTest.cs" />
+    <Compile Include="TestMedia.cs" />
     <Compile Include="TestPages.cs" />
     <Compile Include="TestTags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

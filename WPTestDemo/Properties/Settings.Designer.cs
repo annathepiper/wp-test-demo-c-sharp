@@ -148,5 +148,23 @@ namespace WPTestDemo.Properties {
                 return ((string)(this["getTaxonomyName"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("25549")]
+        public string getMediaIdWindows {
+            get {
+                return ((string)(this["getMediaIdWindows"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("cropped-faerie-blood-epub-cover.jpg")]
+        public string getMediaTitle {
+            get {
+                return ((string)(this["getMediaTitle"]));
+            }
+        }
     }
 }
