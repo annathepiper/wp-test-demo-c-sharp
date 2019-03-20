@@ -218,5 +218,29 @@ namespace WPTestDemo
             var response = Client.Get(request);
             return JObject.Parse(response.Content);
         }
+
+        /// <summary>
+        /// Get a JObject of post types on the test WordPress site.
+        /// </summary>
+        /// <returns></returns>
+        public JObject GetPostTypes()
+        {
+            var request = new RestRequest("/types", DataFormat.Json);
+            var response = Client.Get(request);
+            return JObject.Parse(response.Content);
+        }
+
+        /// <summary>
+        /// Get a specific post type on the test WordPress site by its tag.
+        /// </summary>
+        /// <param name="postTypeTag">String containing the tag for the post type to work with</param>
+        /// <returns>JObject containing the post type data</returns>
+        public JObject GetPostTypeByTag(string postTypeTag)
+        {
+            var request = new RestRequest("/types/{postTypeTag}", DataFormat.Json).
+                AddParameter("postTypeTag", postTypeTag, ParameterType.UrlSegment);
+            var response = Client.Get(request);
+            return JObject.Parse(response.Content);
+        }
     }
 }

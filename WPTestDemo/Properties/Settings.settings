@@ -56,5 +56,11 @@
     <Setting Name="getUserName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">annathepiper</Value>
     </Setting>
+    <Setting Name="getPostTypeTag" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">post</Value>
+    </Setting>
+    <Setting Name="getPostTypeName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Posts</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

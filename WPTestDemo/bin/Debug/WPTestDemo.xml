@@ -89,6 +89,16 @@
             Default user name to use for tests
             </summary>
         </member>
+        <member name="F:WPTestDemo.BaseTest.getPostTypeTag">
+            <summary>
+            Default post type tag to use for tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getPostTypeName">
+            <summary>
+            Default post type name to use for tests
+            </summary>
+        </member>
         <member name="F:WPTestDemo.BaseTest.wpTC">
             <summary>
             For generating the instance of the WP Test Client
@@ -97,6 +107,11 @@
         <member name="M:WPTestDemo.BaseTest.SetUp">
             <summary>
             Setup method for all test classes
+            </summary>
+        </member>
+        <member name="T:WPTestDemo.TestMedia">
+            <summary>
+            Test cases related to media on the Wordpress test site.
             </summary>
         </member>
         <member name="M:WPTestDemo.TestMedia.TestGetMediaReturnsMedia">
@@ -109,6 +124,11 @@
             Verify that you can get a media item by a specific ID off the GetMedia endpoint.
             </summary>
         </member>
+        <member name="T:WPTestDemo.TestPages">
+            <summary>
+            Test cases related to pages on the Wordpress test site.
+            </summary>
+        </member>
         <member name="M:WPTestDemo.TestPages.TestGetPagesReturnsPages">
             <summary>
             Verify that the GetPages endpoint actually returns data. There should be a JArray of length > 0.
@@ -117,6 +137,27 @@
         <member name="M:WPTestDemo.TestPages.TestGetPageById">
             <summary>
             Verify that you can get a page by a specific ID off the GetPages endpoint.
+            </summary>
+        </member>
+        <member name="T:WPTestDemo.TestPostTypes">
+            <summary>
+            Test cases related to post types on the Wordpress test site.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostTypes.TestGetPostTypesReturnsPostTypes">
+            <summary>
+            Verify that the GetPostTypes endpoint actually returns data. There
+            should be a JObject of length == 4.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostTypes.TestGetPostTypeByTag">
+            <summary>
+            Verify that you can get a post type by a specific tag off the GetPostTypes endpoint.
+            </summary>
+        </member>
+        <member name="T:WPTestDemo.TestTags">
+            <summary>
+            Test cases related to tags on the Wordpress test site.
             </summary>
         </member>
         <member name="M:WPTestDemo.TestTags.TestGetTagsReturnsTags">
@@ -146,7 +187,7 @@
         </member>
         <member name="T:WPTestDemo.TestComments">
             <summary>
-            Test cases related to comments on the Wordpress test site
+            Test cases related to comments on the Wordpress test site.
             </summary>
         </member>
         <member name="M:WPTestDemo.TestComments.TestGetCommentsReturnsComments">
@@ -174,6 +215,11 @@
             Verify that you can get a post by a specific ID off the GetPosts endpoint.
             </summary>
         </member>
+        <member name="T:WPTestDemo.TestTaxonomies">
+            <summary>
+            Test cases related to taxonomies on the Wordpress test site.
+            </summary>
+        </member>
         <member name="M:WPTestDemo.TestTaxonomies.TestGetTaxonomiesReturnsTaxonomies">
             <summary>
             Verify that the GetTaxonomies endpoint actually returns data. There
@@ -183,6 +229,11 @@
         <member name="M:WPTestDemo.TestTaxonomies.TestGetTaxonomyByTag">
             <summary>
             Verify that you can get a taxonomy by a specific tag off the GetTaxonomies endpoint.
+            </summary>
+        </member>
+        <member name="T:WPTestDemo.TestUsers">
+            <summary>
+            Test cases related to users on the Wordpress test site.
             </summary>
         </member>
         <member name="M:WPTestDemo.TestUsers.TestGetUsersReturnsUsers">
@@ -313,6 +364,19 @@
             </summary>
             <param name="userId">String containing the ID of the user to work with</param>
             <returns>JObject containing the user data</returns>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetPostTypes">
+            <summary>
+            Get a JObject of post types on the test WordPress site.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WPTestDemo.WPTestClient.GetPostTypeByTag(System.String)">
+            <summary>
+            Get a specific post type on the test WordPress site by its tag.
+            </summary>
+            <param name="postTypeTag">String containing the tag for the post type to work with</param>
+            <returns>JObject containing the post type data</returns>
         </member>
     </members>
 </doc>
