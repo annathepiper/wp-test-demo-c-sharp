@@ -72,6 +72,16 @@ namespace WPTestDemo
         public static string getTaxonomyName;
 
         /// <summary>
+        /// Default media ID for Windows to use for tests
+        /// </summary>
+        public static string getMediaIdWindows;
+
+        /// <summary>
+        /// Default media title to use for tests
+        /// </summary>
+        public static string getMediaTitle;
+
+        /// <summary>
         /// For generating the instance of the WP Test Client
         /// </summary>
         public WPTestClient wpTC;
@@ -97,6 +107,8 @@ namespace WPTestDemo
             getPageTitle = Properties.Settings.Default.getPageTitle;
             getTaxonomyTag = Properties.Settings.Default.getTaxonomyTag;
             getTaxonomyName = Properties.Settings.Default.getTaxonomyName;
+            getMediaIdWindows = Properties.Settings.Default.getMediaIdWindows;
+            getMediaTitle = Properties.Settings.Default.getMediaTitle;
 
             // We also need a WPTestClient object for all the tests to use
             wpTC = new WPTestClient(protocol, host);

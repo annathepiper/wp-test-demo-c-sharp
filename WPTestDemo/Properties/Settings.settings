@@ -44,5 +44,11 @@
     <Setting Name="getTaxonomyName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Categories</Value>
     </Setting>
+    <Setting Name="getMediaIdWindows" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">25549</Value>
+    </Setting>
+    <Setting Name="getMediaTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">cropped-faerie-blood-epub-cover.jpg</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

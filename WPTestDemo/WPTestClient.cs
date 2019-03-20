@@ -172,5 +172,28 @@ namespace WPTestDemo
             return JObject.Parse(response.Content);
 
         }
+
+        /// <summary>
+        /// Get a JSONArray of media on the test WordPress site.
+        /// </summary>
+        public JArray GetMedia()
+        {
+            var request = new RestRequest("/media", DataFormat.Json);
+            var response = Client.Get(request);
+            return JArray.Parse(response.Content);
+        }
+
+        /// <summary>
+        /// Get a specific media item on the test WordPress site by its ID.
+        /// </summary>
+        /// <param name="mediaId">String containing the ID of the media item to work with</param>
+        /// <returns>JObject containing the media data</returns>
+        public JObject GetMediaById(string mediaId)
+        {
+            var request = new RestRequest("/media/{mediaId}", DataFormat.Json).
+                AddParameter("mediaId", mediaId, ParameterType.UrlSegment);
+            var response = Client.Get(request);
+            return JObject.Parse(response.Content);
+        }
     }
 }
