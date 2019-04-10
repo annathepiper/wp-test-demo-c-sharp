@@ -54,7 +54,7 @@ namespace WPTestDemo
         }
 
         /// <summary>
-        /// Verify that the Get Post by Id endpoint throws error behavior when using Integer.MAX_VALUE as a post ID.
+        /// Verify that the Get Post by Id endpoint throws error behavior when using int.MaxValue as a post ID.
         /// </summary>
         [Test]
         public void TestGetPostIdMaxInt()
@@ -64,7 +64,7 @@ namespace WPTestDemo
         }
 
         /// <summary>
-        /// Verify that the Get Post by Id endpoint throws error behavior when using Integer.MIN_VALUE as a post ID.
+        /// Verify that the Get Post by Id endpoint throws error behavior when using int.MinValue as a post ID.
         /// </summary>
         [Test]
         public void TestGetPostIdMinInt()
