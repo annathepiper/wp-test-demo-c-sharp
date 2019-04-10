@@ -220,5 +220,185 @@ namespace WPTestDemo.Properties {
                 return ((string)(this["getPostStatusName"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("999999999")]
+        public string getNonExistentId {
+            get {
+                return ((string)(this["getNonExistentId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Invalid post ID.")]
+        public string getNonExistentMessage {
+            get {
+                return ((string)(this["getNonExistentMessage"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("rest_post_invalid_id")]
+        public string getNonExistentCode {
+            get {
+                return ((string)(this["getNonExistentCode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("pancakes")]
+        public string getNonExistentTag {
+            get {
+                return ((string)(this["getNonExistentTag"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("aaaaaaa")]
+        public string getInvalidId {
+            get {
+                return ((string)(this["getInvalidId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("No route was found matching the URL and request method")]
+        public string getInvalidMessage {
+            get {
+                return ((string)(this["getInvalidMessage"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("rest_no_route")]
+        public string getInvalidCode {
+            get {
+                return ((string)(this["getInvalidCode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("pancakes(*)(@!!!")]
+        public string getInvalidTag {
+            get {
+                return ((string)(this["getInvalidTag"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Term does not exist.")]
+        public string getTermNonExistentMessage {
+            get {
+                return ((string)(this["getTermNonExistentMessage"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("rest_term_invalid")]
+        public string getTermNonExistentCode {
+            get {
+                return ((string)(this["getTermNonExistentCode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Invalid comment ID.")]
+        public string getCommentNonExistentMessage {
+            get {
+                return ((string)(this["getCommentNonExistentMessage"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("rest_comment_invalid_id")]
+        public string getCommentNonExistentCode {
+            get {
+                return ((string)(this["getCommentNonExistentCode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Invalid taxonomy.")]
+        public string getTaxonomyNonExistentMessage {
+            get {
+                return ((string)(this["getTaxonomyNonExistentMessage"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("rest_taxonomy_invalid")]
+        public string getTaxonomyNonExistentCode {
+            get {
+                return ((string)(this["getTaxonomyNonExistentCode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Invalid user ID.")]
+        public string getUserNonExistentMessage {
+            get {
+                return ((string)(this["getUserNonExistentMessage"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("rest_user_invalid_id")]
+        public string getUserNonExistentCode {
+            get {
+                return ((string)(this["getUserNonExistentCode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Invalid post type.")]
+        public string getPostTypeNonExistentMessage {
+            get {
+                return ((string)(this["getPostTypeNonExistentMessage"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("rest_type_invalid")]
+        public string getPostTypeNonExistentCode {
+            get {
+                return ((string)(this["getPostTypeNonExistentCode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Invalid status.")]
+        public string getPostStatusNonExistentMessage {
+            get {
+                return ((string)(this["getPostStatusNonExistentMessage"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("rest_status_invalid")]
+        public string getPostStatusNonExistentCode {
+            get {
+                return ((string)(this["getPostStatusNonExistentCode"]));
+            }
+        }
     }
 }

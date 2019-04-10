@@ -77,6 +77,7 @@
     <Compile Include="TestTaxonomies.cs" />
     <Compile Include="TestUsers.cs" />
     <Compile Include="WPTestClient.cs" />
+    <Compile Include="WPTestLib.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

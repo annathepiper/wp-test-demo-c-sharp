@@ -109,9 +109,116 @@
             Default post status name to use for tests
             </summary>
         </member>
+        <member name="F:WPTestDemo.BaseTest.getNonExistentId">
+            <summary>
+            Default string to use as a non-existent ID in tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getNonExistentMessage">
+            <summary>
+            Default string to use as the expected message when an item doesn't
+            exist in the tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getNonExistentCode">
+            <summary>
+            Default string to use as the error code when an item doesn't exist
+            in the tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getNonExistentTag">
+            <summary>
+            Default string to use for a non-existent tag in tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getInvalidId">
+            <summary>
+            Default string to use for an invalid ID in the tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getInvalidMessage">
+            <summary>
+            Default response message to expect when an item is invalid in the tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getInvalidCode">
+            <summary>
+            Default response code to expect when an item is invalid in the tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getInvalidTag">
+            <summary>
+            Default string to use for an invalid tag in the tests
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getTermNonExistentMessage">
+            <summary>
+            Default message to expect when a particular test term does not exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getTermNonExistentCode">
+            <summary>
+            Default error code to expect when a particular test term does not exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getCommentNonExistentMessage">
+            <summary>
+            Default error message to expect when a comment doesn't exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getCommentNonExistentCode">
+            <summary>
+            Default error code to expect when a comment doesn't exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getTaxonomyNonExistentMessage">
+            <summary>
+            Default error message to expect when a taxonomy doesn't exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getTaxonomyNonExistentCode">
+            <summary>
+            Default error code to expect when a taxonomy doesn't exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getUserNonExistentMessage">
+            <summary>
+            Default error message to expect when a user doesn't exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getUserNonExistentCode">
+            <summary>
+            Default error code to expect when a user doesn't exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getPostTypeNonExistentMessage">
+            <summary>
+            Default error message to expect when a post type doesn't exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getPostTypeNonExistentCode">
+            <summary>
+            Default error code to expect when a post type doesn't exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getPostStatusNonExistentMessage">
+            <summary>
+            Default error message to expect when a post status doesn't exist
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.getPostStatusNonExistentCode">
+            <summary>
+            Default error code to expect when a post status doesn't exist
+            </summary>
+        </member>
         <member name="F:WPTestDemo.BaseTest.wpTC">
             <summary>
             For generating the instance of the WP Test Client
+            </summary>
+        </member>
+        <member name="F:WPTestDemo.BaseTest.wpLib">
+            <summary>
+            For generating an instance of WPTestLib
             </summary>
         </member>
         <member name="M:WPTestDemo.BaseTest.SetUp">
@@ -239,6 +346,27 @@
         <member name="M:WPTestDemo.TestPosts.TestGetPostById">
             <summary>
             Verify that you can get a post by a specific ID off the GetPosts endpoint.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPosts.TestGetPostIdThatDoesNotExist">
+            <summary>
+            Verify that the Get Post by Id endpoint exhibits expected error
+            behavior if you throw it a post ID that doesn't actually exist.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPosts.TestGetPostIdBadId">
+            <summary>
+            Verify that the Get Post by Id endpoint throws expected error behavior if given invalid data for its post ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPosts.TestGetPostIdMaxInt">
+            <summary>
+            Verify that the Get Post by Id endpoint throws error behavior when using Integer.MAX_VALUE as a post ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPosts.TestGetPostIdMinInt">
+            <summary>
+            Verify that the Get Post by Id endpoint throws error behavior when using Integer.MIN_VALUE as a post ID.
             </summary>
         </member>
         <member name="T:WPTestDemo.TestTaxonomies">
@@ -415,6 +543,31 @@
             </summary>
             <param name="postStatusTag">String containing the tag for the post status to work with</param>
             <returns>JObject containing the post status data</returns>
+        </member>
+        <member name="T:WPTestDemo.WPTestLib">
+            <summary>
+            This class is a helper library with methods used by the test classes.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.WPTestLib.VerifyResponseItemDoesNotExist(Newtonsoft.Json.Linq.JObject,System.String,System.String)">
+            <summary>
+            Helper method to take a JSON response object, expected error code,
+            and expected error message, and make sure the response contains the
+            appropriate data to reflect that the tested-for item does not exist.
+            </summary>
+            <param name="response">JObject response to test</param>
+            <param name="errorCode">Expected error code</param>
+            <param name="errorMessage">Expected error message</param>
+        </member>
+        <member name="M:WPTestDemo.WPTestLib.VerifyResponseItemIsInvalid(Newtonsoft.Json.Linq.JObject,System.String,System.String)">
+            <summary>
+            Helper method to take a JSONObject response, an errorCode String,
+            and an errorMessage String, and verify that the response contains
+            appropriate data to reflect that the tested-for item is invalid.
+            </summary>
+            <param name="response">JObject response data to test</param>
+            <param name="errorCode">String containing the expected error code</param>
+            <param name="errorMessage">String containing the expected error message</param>
         </member>
     </members>
 </doc>
