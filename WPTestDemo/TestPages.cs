@@ -31,5 +31,46 @@ namespace WPTestDemo
             Assert.AreEqual(response["id"].ToString(), getPageId, "GetPages endpoint didn't return correct ID number.");
             Assert.AreEqual(renderedTitle["rendered"].ToString(), getPageTitle, "Retrieved page from GetPages endpoint does not have expected title.");
         }
+
+        /// <summary>
+        /// Verify that the Get Page by Id endpoint exhibits expected error
+        /// behavior if you throw it a page ID that doesn't actually exist.
+        /// </summary>
+        [Test]
+        public void TestGetPageIdThatDoesNotExist()
+        {
+            JObject response = wpTC.GetPageById(getNonExistentId);
+            wpLib.VerifyResponseItemDoesNotExist(response, getNonExistentCode, getNonExistentMessage);
+        }
+
+        /// <summary>
+        /// Verify that the Get Page by Id endpoint throws expected error behavior if given invalid data for its page ID.
+        /// </summary>
+        [Test]
+        public void TestGetPageIdBadId()
+        {
+            JObject response = wpTC.GetPageById(getInvalidId);
+            wpLib.VerifyResponseItemIsInvalid(response, getInvalidCode, getInvalidMessage);
+        }
+
+        /// <summary>
+        /// Verify that the Get Page by Id endpoint throws error behavior when using int.MaxValue as a page ID.
+        /// </summary>
+        [Test]
+        public void TestGetPageIdMaxInt()
+        {
+            JObject response = wpTC.GetPageById(int.MaxValue.ToString());
+            wpLib.VerifyResponseItemDoesNotExist(response, getNonExistentCode, getNonExistentMessage);
+        }
+
+        /// <summary>
+        /// Verify that the Get Page by Id endpoint throws error behavior when using int.MinValue as a page ID.
+        /// </summary>
+        [Test]
+        public void TestGetPageIdMinInt()
+        {
+            JObject response = wpTC.GetPageById(int.MinValue.ToString());
+            wpLib.VerifyResponseItemIsInvalid(response, getInvalidCode, getInvalidMessage);
+        }
     }
 }
