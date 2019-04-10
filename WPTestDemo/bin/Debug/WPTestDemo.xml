@@ -256,6 +256,27 @@
             Verify that you can get a page by a specific ID off the GetPages endpoint.
             </summary>
         </member>
+        <member name="M:WPTestDemo.TestPages.TestGetPageIdThatDoesNotExist">
+            <summary>
+            Verify that the Get Page by Id endpoint exhibits expected error
+            behavior if you throw it a page ID that doesn't actually exist.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPages.TestGetPageIdBadId">
+            <summary>
+            Verify that the Get Page by Id endpoint throws expected error behavior if given invalid data for its page ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPages.TestGetPageIdMaxInt">
+            <summary>
+            Verify that the Get Page by Id endpoint throws error behavior when using int.MaxValue as a page ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPages.TestGetPageIdMinInt">
+            <summary>
+            Verify that the Get Page by Id endpoint throws error behavior when using int.MinValue as a page ID.
+            </summary>
+        </member>
         <member name="T:WPTestDemo.TestPostStatuses">
             <summary>
             Test cases related to post types on the Wordpress test site.
@@ -361,12 +382,12 @@
         </member>
         <member name="M:WPTestDemo.TestPosts.TestGetPostIdMaxInt">
             <summary>
-            Verify that the Get Post by Id endpoint throws error behavior when using Integer.MAX_VALUE as a post ID.
+            Verify that the Get Post by Id endpoint throws error behavior when using int.MaxValue as a post ID.
             </summary>
         </member>
         <member name="M:WPTestDemo.TestPosts.TestGetPostIdMinInt">
             <summary>
-            Verify that the Get Post by Id endpoint throws error behavior when using Integer.MIN_VALUE as a post ID.
+            Verify that the Get Post by Id endpoint throws error behavior when using int.MinValue as a post ID.
             </summary>
         </member>
         <member name="T:WPTestDemo.TestTaxonomies">
