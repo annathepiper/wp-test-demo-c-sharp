@@ -31,5 +31,46 @@ namespace WPTestDemo
             Assert.AreEqual(response["id"].ToString(), getPostId, "GetPosts endpoint didn't return correct ID number.");
             Assert.AreEqual(renderedTitle["rendered"].ToString(), getPostTitle, "Retrieved post from GetPosts endpoint does not have expected title.");
         }
+
+        /// <summary>
+        /// Verify that the Get Post by Id endpoint exhibits expected error
+        /// behavior if you throw it a post ID that doesn't actually exist.
+        /// </summary>
+        [Test]
+        public void TestGetPostIdThatDoesNotExist()
+        {
+            JObject response = wpTC.GetPostById(getNonExistentId);
+            wpLib.VerifyResponseItemDoesNotExist(response, getNonExistentCode, getNonExistentMessage);
+        }
+
+        /// <summary>
+        /// Verify that the Get Post by Id endpoint throws expected error behavior if given invalid data for its post ID.
+        /// </summary>
+        [Test]
+        public void TestGetPostIdBadId()
+        {
+            JObject response = wpTC.GetPostById(getInvalidId);
+            wpLib.VerifyResponseItemIsInvalid(response, getInvalidCode, getInvalidMessage);
+        }
+
+        /// <summary>
+        /// Verify that the Get Post by Id endpoint throws error behavior when using Integer.MAX_VALUE as a post ID.
+        /// </summary>
+        [Test]
+        public void TestGetPostIdMaxInt()
+        {
+            JObject response = wpTC.GetPostById(int.MaxValue.ToString());
+            wpLib.VerifyResponseItemDoesNotExist(response, getNonExistentCode, getNonExistentMessage);
+        }
+
+        /// <summary>
+        /// Verify that the Get Post by Id endpoint throws error behavior when using Integer.MIN_VALUE as a post ID.
+        /// </summary>
+        [Test]
+        public void TestGetPostIdMinInt()
+        {
+            JObject response = wpTC.GetPostById(int.MinValue.ToString());
+            wpLib.VerifyResponseItemIsInvalid(response, getInvalidCode, getInvalidMessage);
+        }
     }
 }

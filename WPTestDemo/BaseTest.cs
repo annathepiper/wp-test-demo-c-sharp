@@ -112,9 +112,116 @@ namespace WPTestDemo
         public static string getPostStatusName;
 
         /// <summary>
+        /// Default string to use as a non-existent ID in tests
+        /// </summary>
+        public static string getNonExistentId;
+
+        /// <summary>
+        /// Default string to use as the expected message when an item doesn't
+        /// exist in the tests
+        /// </summary>
+        public static string getNonExistentMessage;
+        
+        /// <summary>
+        /// Default string to use as the error code when an item doesn't exist
+        /// in the tests
+        /// </summary>
+        public static string getNonExistentCode;
+
+        /// <summary>
+        /// Default string to use for a non-existent tag in tests
+        /// </summary>
+        public static string getNonExistentTag;
+
+        /// <summary>
+        /// Default string to use for an invalid ID in the tests
+        /// </summary>
+        public static string getInvalidId;
+
+        /// <summary>
+        /// Default response message to expect when an item is invalid in the tests
+        /// </summary>
+        public static string getInvalidMessage;
+
+        /// <summary>
+        /// Default response code to expect when an item is invalid in the tests
+        /// </summary>
+        public static string getInvalidCode;
+
+        /// <summary>
+        /// Default string to use for an invalid tag in the tests
+        /// </summary>
+        public static string getInvalidTag;
+
+        /// <summary>
+        /// Default message to expect when a particular test term does not exist
+        /// </summary>
+        public static string getTermNonExistentMessage;
+
+        /// <summary>
+        /// Default error code to expect when a particular test term does not exist
+        /// </summary>
+        public static string getTermNonExistentCode;
+
+        /// <summary>
+        /// Default error message to expect when a comment doesn't exist
+        /// </summary>
+        public static string getCommentNonExistentMessage;
+
+        /// <summary>
+        /// Default error code to expect when a comment doesn't exist
+        /// </summary>
+        public static string getCommentNonExistentCode;
+
+        /// <summary>
+        /// Default error message to expect when a taxonomy doesn't exist
+        /// </summary>
+        public static string getTaxonomyNonExistentMessage;
+
+        /// <summary>
+        /// Default error code to expect when a taxonomy doesn't exist
+        /// </summary>
+        public static string getTaxonomyNonExistentCode;
+
+        /// <summary>
+        /// Default error message to expect when a user doesn't exist
+        /// </summary>
+        public static string getUserNonExistentMessage;
+
+        /// <summary>
+        /// Default error code to expect when a user doesn't exist
+        /// </summary>
+        public static string getUserNonExistentCode;
+
+        /// <summary>
+        /// Default error message to expect when a post type doesn't exist
+        /// </summary>
+        public static string getPostTypeNonExistentMessage;
+
+        /// <summary>
+        /// Default error code to expect when a post type doesn't exist
+        /// </summary>
+        public static string getPostTypeNonExistentCode;
+
+        /// <summary>
+        /// Default error message to expect when a post status doesn't exist
+        /// </summary>
+        public static string getPostStatusNonExistentMessage;
+
+        /// <summary>
+        /// Default error code to expect when a post status doesn't exist
+        /// </summary>
+        public static string getPostStatusNonExistentCode;
+
+        /// <summary>
         /// For generating the instance of the WP Test Client
         /// </summary>
         public WPTestClient wpTC;
+
+        /// <summary>
+        /// For generating an instance of WPTestLib
+        /// </summary>
+        public WPTestLib wpLib;
 
         /// <summary>
         /// Setup method for all test classes
@@ -146,8 +253,33 @@ namespace WPTestDemo
             getPostStatusTag = Properties.Settings.Default.getPostStatusTag;
             getPostStatusName = Properties.Settings.Default.getPostStatusName;
 
+            // Items specifically pertaining to negative test cases
+            getNonExistentId = Properties.Settings.Default.getNonExistentId;
+            getNonExistentMessage = Properties.Settings.Default.getNonExistentMessage;
+            getNonExistentCode = Properties.Settings.Default.getNonExistentCode;
+            getNonExistentTag = Properties.Settings.Default.getNonExistentTag;
+            getInvalidId = Properties.Settings.Default.getInvalidId;
+            getInvalidMessage = Properties.Settings.Default.getInvalidMessage;
+            getInvalidCode = Properties.Settings.Default.getInvalidCode;
+            getInvalidTag = Properties.Settings.Default.getInvalidTag;
+            getTermNonExistentMessage = Properties.Settings.Default.getTermNonExistentMessage;
+            getTermNonExistentCode = Properties.Settings.Default.getTermNonExistentCode;
+            getCommentNonExistentMessage = Properties.Settings.Default.getCommentNonExistentMessage;
+            getCommentNonExistentCode = Properties.Settings.Default.getCommentNonExistentCode;
+            getTaxonomyNonExistentMessage = Properties.Settings.Default.getTaxonomyNonExistentMessage;
+            getTaxonomyNonExistentCode = Properties.Settings.Default.getTaxonomyNonExistentCode;
+            getUserNonExistentMessage = Properties.Settings.Default.getUserNonExistentMessage;
+            getUserNonExistentCode = Properties.Settings.Default.getUserNonExistentCode;
+            getPostTypeNonExistentMessage = Properties.Settings.Default.getPostTypeNonExistentMessage;
+            getPostTypeNonExistentCode = Properties.Settings.Default.getPostTypeNonExistentCode;
+            getPostStatusNonExistentMessage = Properties.Settings.Default.getPostStatusNonExistentMessage;
+            getPostStatusNonExistentCode = Properties.Settings.Default.getPostStatusNonExistentCode;
+
             // We also need a WPTestClient object for all the tests to use
             wpTC = new WPTestClient(protocol, host);
+
+            // And a WPTestLib instance
+            wpLib = new WPTestLib();
         }
     }
 }

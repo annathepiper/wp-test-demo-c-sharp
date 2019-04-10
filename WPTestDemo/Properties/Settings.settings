@@ -68,5 +68,65 @@
     <Setting Name="getPostStatusName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Published</Value>
     </Setting>
+    <Setting Name="getNonExistentId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">999999999</Value>
+    </Setting>
+    <Setting Name="getNonExistentMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Invalid post ID.</Value>
+    </Setting>
+    <Setting Name="getNonExistentCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rest_post_invalid_id</Value>
+    </Setting>
+    <Setting Name="getNonExistentTag" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">pancakes</Value>
+    </Setting>
+    <Setting Name="getInvalidId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">aaaaaaa</Value>
+    </Setting>
+    <Setting Name="getInvalidMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No route was found matching the URL and request method</Value>
+    </Setting>
+    <Setting Name="getInvalidCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rest_no_route</Value>
+    </Setting>
+    <Setting Name="getInvalidTag" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">pancakes(*)(@!!!</Value>
+    </Setting>
+    <Setting Name="getTermNonExistentMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Term does not exist.</Value>
+    </Setting>
+    <Setting Name="getTermNonExistentCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rest_term_invalid</Value>
+    </Setting>
+    <Setting Name="getCommentNonExistentMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Invalid comment ID.</Value>
+    </Setting>
+    <Setting Name="getCommentNonExistentCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rest_comment_invalid_id</Value>
+    </Setting>
+    <Setting Name="getTaxonomyNonExistentMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Invalid taxonomy.</Value>
+    </Setting>
+    <Setting Name="getTaxonomyNonExistentCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rest_taxonomy_invalid</Value>
+    </Setting>
+    <Setting Name="getUserNonExistentMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Invalid user ID.</Value>
+    </Setting>
+    <Setting Name="getUserNonExistentCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rest_user_invalid_id</Value>
+    </Setting>
+    <Setting Name="getPostTypeNonExistentMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Invalid post type.</Value>
+    </Setting>
+    <Setting Name="getPostTypeNonExistentCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rest_type_invalid</Value>
+    </Setting>
+    <Setting Name="getPostStatusNonExistentMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Invalid status.</Value>
+    </Setting>
+    <Setting Name="getPostStatusNonExistentCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rest_status_invalid</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
