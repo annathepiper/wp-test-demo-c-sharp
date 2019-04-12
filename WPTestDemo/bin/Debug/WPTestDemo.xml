@@ -241,6 +241,27 @@
             Verify that you can get a media item by a specific ID off the GetMedia endpoint.
             </summary>
         </member>
+        <member name="M:WPTestDemo.TestMedia.TestGetMediaIdThatDoesNotExist">
+            <summary>
+            Verify that the Get Media by Id endpoint exhibits expected error
+            behavior if you throw it a media ID that doesn't actually exist.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestMedia.TestGetMediaIdBadId">
+            <summary>
+            Verify that the Get Media by Id endpoint throws expected error behavior if given invalid data for its media ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestMedia.TestGetMediaIdMaxInt">
+            <summary>
+            Verify that the Get Media by Id endpoint throws error behavior when using int.MaxValue as a media ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestMedia.TestGetMediaIdMinInt">
+            <summary>
+            Verify that the Get Media by Id endpoint throws error behavior when using int.MinValue as a media ID.
+            </summary>
+        </member>
         <member name="T:WPTestDemo.TestPages">
             <summary>
             Test cases related to pages on the Wordpress test site.
@@ -293,6 +314,30 @@
             Verify that you can get a post status by a specific tag off the GetPostStatuses endpoint.
             </summary>
         </member>
+        <member name="M:WPTestDemo.TestPostStatuses.TestGetPostStatusTagThatDoesNotExist">
+            <summary>
+            Verify that the Get Post Status by Tag endpoint exhibits expected error
+            behavior if you throw it a post status tag that doesn't actually exist.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostStatuses.TestGetPostStatusTagBadId">
+            <summary>
+            Verify that the Get Post Status by Tag endpoint throws expected
+            error behavior if given invalid data for its post status tag.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostStatuses.TestGetPostStatusTagMaxInt">
+            <summary>
+            Verify that the Get Post Status by Tag endpoint throws error
+            behavior when using int.MaxValue as a post status tag.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostStatuses.TestGetPostStatusTagMinInt">
+            <summary>
+            Verify that the Get Post Status by Tag endpoint throws error
+            behavior when using int.MinValue as a post status tag.
+            </summary>
+        </member>
         <member name="T:WPTestDemo.TestPostTypes">
             <summary>
             Test cases related to post types on the Wordpress test site.
@@ -307,6 +352,30 @@
         <member name="M:WPTestDemo.TestPostTypes.TestGetPostTypeByTag">
             <summary>
             Verify that you can get a post type by a specific tag off the GetPostTypes endpoint.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostTypes.TestGetPostTypeTagThatDoesNotExist">
+            <summary>
+            Verify that the Get Post Type by Tag endpoint exhibits expected error
+            behavior if you throw it a post type tag that doesn't actually exist.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostTypes.TestGetPostTypeTagBadId">
+            <summary>
+            Verify that the Get Post Type by Tag endpoint throws expected error
+            behavior if given invalid data for its post type tag.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostTypes.TestGetPostTypeTagMaxInt">
+            <summary>
+            Verify that the Get Post Type by Tag endpoint throws error behavior
+            when using int.MaxValue as a post type tag.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestPostTypes.TestGetPostTypeTagMinInt">
+            <summary>
+            Verify that the Get Post Type by Tag endpoint throws error behavior
+            when using int.MinValue as a post type tag.
             </summary>
         </member>
         <member name="T:WPTestDemo.TestTags">
@@ -324,6 +393,27 @@
             Verify that you can get a tag by a specific ID off the GetTags endpoint.
             </summary>
         </member>
+        <member name="M:WPTestDemo.TestTags.TestGetTagIdThatDoesNotExist">
+            <summary>
+            Verify that the Get Tag by Id endpoint exhibits expected error
+            behavior if you throw it a tag ID that doesn't actually exist.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestTags.TestGetTagIdBadId">
+            <summary>
+            Verify that the Get Tag by Id endpoint throws expected error behavior if given invalid data for its tag ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestTags.TestGetTagIdMaxInt">
+            <summary>
+            Verify that the Get Tag by Id endpoint throws error behavior when using int.MaxValue as a tag ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestTags.TestGetTagIdMinInt">
+            <summary>
+            Verify that the Get Tag by Id endpoint throws error behavior when using int.MinValue as a tag ID.
+            </summary>
+        </member>
         <member name="T:WPTestDemo.TestCategories">
             <summary>
             Test cases related to categories on the Wordpress test site.
@@ -339,6 +429,27 @@
             Verify that you can get a category by a specific ID off the GetCategories endpoint.
             </summary>
         </member>
+        <member name="M:WPTestDemo.TestCategories.TestGetCategoryIdThatDoesNotExist">
+            <summary>
+            Verify that the Get Category by Id endpoint exhibits expected error
+            behavior if you throw it a category ID that doesn't actually exist.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestCategories.TestGetCategoryIdBadId">
+            <summary>
+            Verify that the Get Category by Id endpoint throws expected error behavior if given invalid data for its category ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestCategories.TestGetCategoryIdMaxInt">
+            <summary>
+            Verify that the Get Category by Id endpoint throws error behavior when using int.MaxValue as a category ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestCategories.TestGetCategoryIdMinInt">
+            <summary>
+            Verify that the Get Category by Id endpoint throws error behavior when using int.MinValue as a category ID.
+            </summary>
+        </member>
         <member name="T:WPTestDemo.TestComments">
             <summary>
             Test cases related to comments on the Wordpress test site.
@@ -352,6 +463,27 @@
         <member name="M:WPTestDemo.TestComments.TestGetCommentById">
             <summary>
             Verify that you can get a comment by a specific ID off the GetComments endpoint.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestComments.TestGetCommentIdThatDoesNotExist">
+            <summary>
+            Verify that the Get Comment by Id endpoint exhibits expected error
+            behavior if you throw it a comment ID that doesn't actually exist.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestComments.TestGetCommentIdBadId">
+            <summary>
+            Verify that the Get Comment by Id endpoint throws expected error behavior if given invalid data for its comment ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestComments.TestGetCommentIdMaxInt">
+            <summary>
+            Verify that the Get Comment by Id endpoint throws error behavior when using int.MaxValue as a comment ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestComments.TestGetCommentIdMinInt">
+            <summary>
+            Verify that the Get Comment by Id endpoint throws error behavior when using int.MinValue as a comment ID.
             </summary>
         </member>
         <member name="T:WPTestDemo.TestPosts">
@@ -406,6 +538,27 @@
             Verify that you can get a taxonomy by a specific tag off the GetTaxonomies endpoint.
             </summary>
         </member>
+        <member name="M:WPTestDemo.TestTaxonomies.TestGetTaxonomyTagThatDoesNotExist">
+            <summary>
+            Verify that the Get Taxonomy by Tag endpoint exhibits expected error
+            behavior if you throw it a taxonomy tag that doesn't actually exist.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestTaxonomies.TestGetTaxonomyTagBadId">
+            <summary>
+            Verify that the Get Taxonomy by Tag endpoint throws expected error behavior if given invalid data for its taxonomy tag.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestTaxonomies.TestGetTaxonomyTagMaxInt">
+            <summary>
+            Verify that the Get Taxonomy by Tag endpoint throws error behavior when using int.MaxValue as a taxonomy tag.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestTaxonomies.TestGetTaxonomyTagMinInt">
+            <summary>
+            Verify that the Get Taxonomy by Tag endpoint throws error behavior when using int.MinValue as a taxonomy tag.
+            </summary>
+        </member>
         <member name="T:WPTestDemo.TestUsers">
             <summary>
             Test cases related to users on the Wordpress test site.
@@ -419,6 +572,27 @@
         <member name="M:WPTestDemo.TestUsers.TestGetUserById">
             <summary>
             Verify that you can get a user by a specific ID off the GetUsers endpoint.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestUsers.TestGetUserIdThatDoesNotExist">
+            <summary>
+            Verify that the Get User by Id endpoint exhibits expected error
+            behavior if you throw it a user ID that doesn't actually exist.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestUsers.TestGetUserIdBadId">
+            <summary>
+            Verify that the Get User by Id endpoint throws expected error behavior if given invalid data for its user ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestUsers.TestGetUserIdMaxInt">
+            <summary>
+            Verify that the Get User by Id endpoint throws error behavior when using int.MaxValue as a user ID.
+            </summary>
+        </member>
+        <member name="M:WPTestDemo.TestUsers.TestGetUserIdMinInt">
+            <summary>
+            Verify that the Get User by Id endpoint throws error behavior when using int.MinValue as a user ID.
             </summary>
         </member>
         <member name="T:WPTestDemo.WPTestClient">
