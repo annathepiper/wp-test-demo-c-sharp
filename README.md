@@ -22,6 +22,7 @@ The main tool I'm using to do this work is Visual Studio 2017. I've checked in a
 * Using Newtonsoft.Json.Linq functionality to process JSON payloads
 * Using NUnit functionality to run the test suite in Visual Studio and to annotate test methods
 * Testing against a site running as a Docker container
+* Negative test cases to test expected error behavior of the endpoints
 
 ## Reference links
 * [RestSharp](http://restsharp.org/), the library I'm using to do the REST API calls
