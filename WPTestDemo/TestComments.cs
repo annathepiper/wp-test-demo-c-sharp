@@ -32,5 +32,45 @@ namespace WPTestDemo
             Assert.True(renderedContent["rendered"].ToString().Contains(getCommentContent), "Retrieved comment from GetComment endpoint does not have expected content.");
         }
 
+        /// <summary>
+        /// Verify that the Get Comment by Id endpoint exhibits expected error
+        /// behavior if you throw it a comment ID that doesn't actually exist.
+        /// </summary>
+        [Test]
+        public void TestGetCommentIdThatDoesNotExist()
+        {
+            JObject response = wpTC.GetCommentById(getNonExistentId);
+            wpLib.VerifyResponseItemDoesNotExist(response, getCommentNonExistentCode, getCommentNonExistentMessage);
+        }
+
+        /// <summary>
+        /// Verify that the Get Comment by Id endpoint throws expected error behavior if given invalid data for its comment ID.
+        /// </summary>
+        [Test]
+        public void TestGetCommentIdBadId()
+        {
+            JObject response = wpTC.GetCommentById(getInvalidId);
+            wpLib.VerifyResponseItemIsInvalid(response, getInvalidCode, getInvalidMessage);
+        }
+
+        /// <summary>
+        /// Verify that the Get Comment by Id endpoint throws error behavior when using int.MaxValue as a comment ID.
+        /// </summary>
+        [Test]
+        public void TestGetCommentIdMaxInt()
+        {
+            JObject response = wpTC.GetCommentById(int.MaxValue.ToString());
+            wpLib.VerifyResponseItemDoesNotExist(response, getCommentNonExistentCode, getCommentNonExistentMessage);
+        }
+
+        /// <summary>
+        /// Verify that the Get Comment by Id endpoint throws error behavior when using int.MinValue as a comment ID.
+        /// </summary>
+        [Test]
+        public void TestGetCommentIdMinInt()
+        {
+            JObject response = wpTC.GetCommentById(int.MinValue.ToString());
+            wpLib.VerifyResponseItemIsInvalid(response, getInvalidCode, getInvalidMessage);
+        }
     }
 }
